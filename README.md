@@ -7,7 +7,6 @@
    ```
 
 2. **Create environment file**:
-   ```bash
    # Create a file called .env inside root directory, 
    # Have it copy the format of env_template.txt
    
@@ -17,7 +16,6 @@
    # - DATABRICKS_HOST (your workspace URL)
    # - DATABRICKS_TOKEN (your access token)
    # - DATABRICKS_HTTP_PATH (your SQL warehouse path)
-   ```
 
 3. **Run locally**:
    ```bash
