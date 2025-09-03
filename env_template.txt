@@ -1,0 +1,64 @@
+# AutoDQ for Databricks - Environment Variables Template
+# Copy this file to .env and fill in your actual values for local development
+
+# ========================================
+# REQUIRED DATABRICKS CONNECTION SETTINGS
+# ========================================
+
+# Your Databricks workspace URL (with https://)
+DATABRICKS_HOST=https://your-workspace.cloud.databricks.com
+
+# Personal Access Token or Service Principal Token
+# Generate from: User Settings > Developer > Access Tokens
+DATABRICKS_TOKEN=your_databricks_access_token_here
+
+# SQL Warehouse HTTP Path
+# Find in: SQL Warehouses > Your Warehouse > Connection Details
+DATABRICKS_HTTP_PATH=/sql/1.0/warehouses/your-warehouse-id
+
+# ========================================
+# OPTIONAL APPLICATION SETTINGS
+# ========================================
+
+# Default schema for validation tables
+DEFAULT_SCHEMA=multitable_logistics
+
+# Auto-refresh interval in minutes
+DEFAULT_REFRESH_INTERVAL=10
+
+# Databricks Job ID for Smart Rule Assistant (optional)
+DATABRICKS_JOB_ID=your-job-id-here
+
+# ========================================
+# LAKEHOUSE APP SETTINGS (Set by Databricks)
+# ========================================
+
+# Port for the Streamlit application (automatically set by Databricks)
+# DATABRICKS_APP_PORT=8501
+
+# ========================================
+# LOCAL DEVELOPMENT ONLY
+# ========================================
+
+# Streamlit logging level (for debugging)
+# STREAMLIT_LOGGER_LEVEL=debug
+
+# ========================================
+# NOTES
+# ========================================
+
+# 1. For production deployment, use Databricks Secrets instead of .env files
+# 2. Never commit .env files with real credentials to version control
+# 3. Ensure your SQL Warehouse is running before connecting
+# 4. Your token needs permissions for:
+#    - SQL Warehouse access
+#    - Unity Catalog table access
+#    - Job execution (if using Smart Rule Assistant)
+
+# ========================================
+# EXAMPLE VALUES (DO NOT USE IN PRODUCTION)
+# ========================================
+
+# DATABRICKS_HOST=https://abc123.cloud.databricks.com
+# DATABRICKS_TOKEN=your_actual_databricks_token_goes_here
+# DATABRICKS_HTTP_PATH=/sql/1.0/warehouses/a1b2c3d4e5f6g7h8 
