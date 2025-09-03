@@ -7,15 +7,15 @@
    ```
 
 2. **Create environment file**:
-   # Create a file called .env inside root directory, 
-   # Have it copy the format of env_template.txt
+   ### Create a file called .env inside root directory, 
+   ### Have it copy the format of env_template.txt
    
    
-   # Edit .env with your actual Databricks credentials
-   # Replace the placeholder values with your real:
-   # - DATABRICKS_HOST (your workspace URL)
-   # - DATABRICKS_TOKEN (your access token)
-   # - DATABRICKS_HTTP_PATH (your SQL warehouse path)
+   ### Edit .env with your actual Databricks credentials
+   ### Replace the placeholder values with your real:
+   ### - DATABRICKS_HOST (your workspace URL)
+   ### - DATABRICKS_TOKEN (your access token)
+   ### - DATABRICKS_HTTP_PATH (your SQL warehouse path)
 
 3. **Run locally**:
    ```bash
