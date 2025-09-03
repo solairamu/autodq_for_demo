@@ -1,0 +1,8 @@
+{
+  "deployment_type": "client_configured",
+  "configured_at": "2025-09-03 06:27:30.449618",
+  "workspace_url": "https://1027317917071147.7.gcp.databricks.com",
+  "default_schema": "multitable_logistics",
+  "refresh_interval": 10,
+  "setup_completed": true
+}

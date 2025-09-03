@@ -1,0 +1,128 @@
+# ============================================================================
+# AutoDQ for Databricks - Client Configuration Template
+# ============================================================================
+# 
+# This file contains the environment variables needed to configure AutoDQ
+# for your Databricks workspace. Copy this file to ".env" and fill in your
+# actual values.
+#
+# IMPORTANT: Never commit the .env file to version control!
+# ============================================================================
+
+# ============================================================================
+# REQUIRED: DATABRICKS CONNECTION SETTINGS
+# ============================================================================
+
+# Your Databricks workspace URL
+# Example: https://your-company.cloud.databricks.com
+# How to find: Copy the URL from your browser when logged into Databricks
+DATABRICKS_HOST=https://your-workspace.cloud.databricks.com
+
+# Databricks Personal Access Token or Service Principal Token
+# How to get: User Settings → Developer → Access Tokens → Generate New Token
+# Format: Starts with "dapi" (e.g., dapi1234567890abcdef...)
+DATABRICKS_TOKEN=your_databricks_access_token_here
+
+# SQL Warehouse HTTP Path
+# How to find: SQL Warehouses → Select your warehouse → Connection Details
+# Format: /sql/1.0/warehouses/your-warehouse-id
+DATABRICKS_HTTP_PATH=/sql/1.0/warehouses/your-warehouse-id
+
+# ============================================================================
+# OPTIONAL: APPLICATION SETTINGS
+# ============================================================================
+
+# Default schema where your data quality tables are located
+# This will be used if no schema is specified in the application
+DEFAULT_SCHEMA=multitable_logistics
+
+# How often the application should refresh data from Databricks (in minutes)
+# Recommended: 10-30 minutes depending on your data update frequency
+DEFAULT_REFRESH_INTERVAL=10
+
+# SSL verification for Databricks connection
+# Set to "false" only if you have certificate issues (not recommended for production)
+DATABRICKS_SSL_VERIFY=true
+
+# ============================================================================
+# ADVANCED: DATABRICKS FEATURES (Optional)
+# ============================================================================
+
+# Databricks Job ID for Smart Rule Assistant (if you have one configured)
+# Leave empty if you don't use the Smart Rule Assistant feature
+DATABRICKS_JOB_ID=
+
+# Unity Catalog name (if using Unity Catalog)
+# Leave empty to use the default catalog
+DATABRICKS_CATALOG=
+
+# Secrets scope name (if using Databricks Secrets for credential management)
+# Advanced feature - leave empty for standard token authentication
+DATABRICKS_SECRETS_SCOPE=
+
+# ============================================================================
+# SYSTEM SETTINGS (Usually don't need to change)
+# ============================================================================
+
+# Port for the Streamlit application
+# Default is 8501, change only if you have port conflicts
+DATABRICKS_APP_PORT=8501
+
+# Logging level for debugging (debug, info, warning, error)
+# Use "debug" for troubleshooting, "info" for normal operation
+LOG_LEVEL=info
+
+# ============================================================================
+# GETTING YOUR DATABRICKS CONNECTION DETAILS
+# ============================================================================
+#
+# 1. WORKSPACE URL:
+#    - Log into your Databricks workspace
+#    - Copy the URL from your browser address bar
+#    - Example: https://abc123.cloud.databricks.com
+#
+# 2. ACCESS TOKEN:
+#    - In Databricks: Click your profile icon (top right)
+#    - Go to "User Settings"
+#    - Click "Developer" tab
+#    - Click "Access Tokens"
+#    - Click "Generate New Token"
+#    - Give it a name like "AutoDQ" and set expiration (90 days recommended)
+#    - Copy the token (starts with "dapi")
+#
+# 3. SQL WAREHOUSE HTTP PATH:
+#    - In Databricks: Go to "SQL Warehouses" (left sidebar)
+#    - Select your SQL warehouse (or create one if none exists)
+#    - Click "Connection Details" tab
+#    - Copy the "HTTP Path" value
+#    - Example: /sql/1.0/warehouses/abc123def456
+#
+# ============================================================================
+# SECURITY BEST PRACTICES
+# ============================================================================
+#
+# 1. Never commit your .env file to version control (Git, etc.)
+# 2. Use tokens with minimum required permissions
+# 3. Set token expiration dates (90 days recommended)
+# 4. Rotate tokens regularly
+# 5. Use Databricks Secrets for production deployments
+# 6. Restrict SQL warehouse access to authorized users only
+#
+# ============================================================================
+# TROUBLESHOOTING
+# ============================================================================
+#
+# Connection Issues:
+# - Verify workspace URL is correct (with https://)
+# - Check if access token is valid and not expired
+# - Ensure SQL warehouse is running
+# - Verify network connectivity to Databricks
+#
+# Permission Issues:
+# - Ensure token has SQL warehouse access
+# - Check Unity Catalog permissions if using Unity Catalog
+# - Verify schema access permissions
+#
+# For more help, run the setup wizard: streamlit run setup_wizard.py
+#
+# ============================================================================

@@ -1,3 +1,26 @@
+### For Clients: Quick Deployment
+
+AutoDQ automatically adapts to your Databricks environment. Choose your preferred setup method:
+
+#### 🚀 **Option 1: Automated Setup (Recommended)**
+```bash
+python deploy_for_client.py
+```
+
+#### 🧙 **Option 2: Interactive Setup Wizard**
+```bash
+streamlit run setup_wizard.py
+```
+
+#### ⚙️ **Option 3: Manual Configuration**
+```bash
+cp client_env_template.txt .env
+# Edit .env with your Databricks details
+streamlit run app.py
+```
+
+> **📖 Full Instructions**: See [CLIENT_DEPLOYMENT.md](CLIENT_DEPLOYMENT.md) for complete setup guide
+
 ### Local Development
 
 1. **Install dependencies**:
