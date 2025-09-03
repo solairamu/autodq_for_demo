@@ -49,3 +49,20 @@ streamlit run app.py
 
 > **⚠️ Important**: Never commit your `.env` file with real credentials to version control. The `.env` file is already included in `.gitignore` for security.
 
+### Testing
+
+Test all functionality without needing a Databricks connection:
+
+```bash
+python3 test_everything.py
+```
+
+This single command:
+- ✅ Tests all functionality (data loading, cleaning, anomaly detection)
+- ✅ Tests all edge cases (Unicode, SQL reserved words, extreme values)  
+- ✅ Generates comprehensive test data (19+ datasets)
+- ✅ Tests 6 industry patterns (Enterprise, SaaS, E-commerce, etc.)
+- ✅ Covers 95%+ of real-world scenarios
+
+For detailed information, see `SIMPLE_TESTING_README.md`.
+

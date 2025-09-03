@@ -168,3 +168,6 @@ logs/
 # Artifacts directory (if it contains temporary/generated files)
 artifacts/temp/
 artifacts/cache/
+
+sample_test_data/
+comprehensive_test_data/
