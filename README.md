@@ -12,6 +12,26 @@ AutoDQ is a comprehensive Data Quality and Validation platform designed specific
 - **Action Tracking** - Issue management and resolution workflow
 - **Seamless Databricks Integration** - Native Unity Catalog and SQL Warehouse support
 
+## ⚡ Quick Start for Local Development
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/solairamu/autodq_for_demo.git
+   cd autodq_for_demo
+   ```
+
+2. **Set up your environment**:
+   ```bash
+   pip install -r requirements.txt python-dotenv
+   cp env_example.txt .env
+   # Edit .env with your Databricks credentials
+   ```
+
+3. **Run the application**:
+   ```bash
+   streamlit run app.py
+   ```
+
 ## 📋 Prerequisites
 
 Before deploying AutoDQ as a Lakehouse App, ensure you have:
@@ -260,19 +280,27 @@ AutoDQ inherits your Databricks workspace security:
 1. **Install dependencies**:
    ```bash
    pip install -r requirements.txt
+   pip install python-dotenv
    ```
 
-2. **Set environment variables**:
+2. **Create environment file**:
    ```bash
-   export DATABRICKS_HOST=your-host
-   export DATABRICKS_TOKEN=your-token
-   export DATABRICKS_HTTP_PATH=your-path
+   # Copy the example environment file
+   cp env_example.txt .env
+   
+   # Edit .env with your actual Databricks credentials
+   # Replace the placeholder values with your real:
+   # - DATABRICKS_HOST (your workspace URL)
+   # - DATABRICKS_TOKEN (your access token)
+   # - DATABRICKS_HTTP_PATH (your SQL warehouse path)
    ```
 
 3. **Run locally**:
    ```bash
    streamlit run app.py
    ```
+
+> **⚠️ Important**: Never commit your `.env` file with real credentials to version control. The `.env` file is already included in `.gitignore` for security.
 
 ### Contributing
 
